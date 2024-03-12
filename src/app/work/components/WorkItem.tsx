@@ -22,16 +22,11 @@ export function WorkItem({
           {item.dateRange}
         </p>
         <div>
-          <hgroup>
-            <h2>
-              {item.company}{" "}
-              <span
-                className="cursor-pointer"
-                onClick={() => setIsExpanded(!isExpanded)}
-              >
-                {isExpanded ? "(Collapse)" : "(Expand)"}
-              </span>
-            </h2>
+          <hgroup
+            className="cursor-pointer"
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
+            {item.company && <h2>{item.company}</h2>}
             <p>{item.jobTitle}</p>
           </hgroup>
           {isExpanded && <p className="mt-4">{item.description}</p>}
