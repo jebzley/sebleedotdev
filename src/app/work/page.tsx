@@ -38,9 +38,13 @@ export default function WorkPage() {
           </hgroup>
         </div>
         <ul className="list-none">
-          {data.map((item) => {
+          {data.map((item, index) => {
             return (
-              <WorkItem key={`${item.company}${item.jobTitle}`} item={item} />
+              <WorkItem
+                key={`${item.company}${item.jobTitle}`}
+                isLastIndex={index + 1 === data.length}
+                item={item}
+              />
             );
           })}
         </ul>
