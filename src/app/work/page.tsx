@@ -12,25 +12,28 @@ const data: WorkItemData[] = [
     company: "Immersive Labs",
     dateRange: "Jan 2023 - Feb 2024",
     jobTitle: "Mid Frontend Developer",
-    description: "Mid af mate",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero adipisci dicta, cumque dolorum, sint ea exercitationem repellendus eligendi sunt, impedit rerum maiores non blanditiis aperiam assumenda beatae voluptate error doloribus.",
   },
   {
     company: "Immersive Labs",
     dateRange: "Jul 2022 - Jan 2023",
     jobTitle: "Associate Frontend Developer",
-    description: "Promoted for being a legend",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero adipisci dicta, cumque dolorum, sint ea exercitationem repellendus eligendi sunt, impedit rerum maiores non blanditiis aperiam assumenda beatae voluptate error doloribus.",
   },
   {
     company: "Immersive Labs",
     dateRange: "Sep 2021 - Jul 2022",
     jobTitle: "Junior Software Engineer",
-    description: "Got a little jobby",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero adipisci dicta, cumque dolorum, sint ea exercitationem repellendus eligendi sunt, impedit rerum maiores non blanditiis aperiam assumenda beatae voluptate error doloribus.",
   },
 ];
 export default function WorkPage() {
   return (
     <div className="h-full flex">
-      <div className="flex flex-col mx-auto gap-6 max-w-2xl">
+      <div className="flex flex-col mx-auto gap-6 max-w-xl">
         <div className="flex gap-6 flex-wrap items-center">
           <hgroup>
             <h1 className="text-5xl">Curriculum Vitae</h1>
