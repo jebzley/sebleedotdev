@@ -1,4 +1,3 @@
-import Chip from "@/components/Chip";
 import { WorkItemData } from "../page";
 
 export function WorkItem({
@@ -19,16 +18,26 @@ export function WorkItem({
       )}
       <span aria-hidden className="w-3 border border-black absolute top-3" />
       <div className="ml-6 flex gap-6">
-        <p className="min-w-max text-xs uppercase leading-loose">
+        <header className="min-w-max text-xs uppercase leading-loose">
           {item.dateRange}
-        </p>
-        <div>
+        </header>
+        <div className="flex flex-col gap-2">
           <hgroup>
             {item.company && <h2>{item.company}</h2>}
             <h3 className="font-medium">{item.jobTitle}</h3>
           </hgroup>
-
-          <p className="mt-4">{item.description}</p>
+          <p>{item.description}</p>
+          {item.tools && (
+            <ul className="flex gap-2 flex-wrap" aria-label="Technologies used">
+              {item.tools.map((tool) => {
+                return (
+                  <li className="bg-gray-200 px-3 py-2 rounded-3xl text-xs">
+                    {tool}
+                  </li>
+                );
+              })}
+            </ul>
+          )}
         </div>
       </div>
     </li>
