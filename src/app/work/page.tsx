@@ -5,7 +5,7 @@ import { WORK_HISTORY_DATA } from "./constants";
 export interface WorkItemData {
   company?: string;
   jobTitle: string;
-  description: string;
+  description?: string;
   dateRange: string;
   tools?: string[];
 }
