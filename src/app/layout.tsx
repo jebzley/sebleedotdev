@@ -1,3 +1,4 @@
+import { Navigation } from "@/components/Navigation";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -15,8 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} w-screen h-screen`}>
-        <main className="h-full flex">{children}</main>
+      <body className={`${inter.className} p-8 h-screen`}>
+        <header>
+          <Navigation />
+        </header>
+        <main className="h-full">{children}</main>
       </body>
     </html>
   );
