@@ -1,3 +1,4 @@
+import { SocialIcons } from "@/components/SocialIcons";
 import { PageLayout } from "@/components/PageLayout";
 import { PageTitle } from "@/components/PageTitle";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <PageLayout>
       <div className="flex flex-col gap-8">
         <PageTitle title="Seb Lee" subtitle="Software Developer" />
+        <SocialIcons />
         <p>
           A short paragraph about me and some links to my socials. To be added
           in a later PR.

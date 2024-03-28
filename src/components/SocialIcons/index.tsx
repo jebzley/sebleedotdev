@@ -1,0 +1,53 @@
+import Image from "next/image";
+
+export function SocialIcons() {
+  return (
+    <ul className="flex gap-8">
+      <li>
+        <a
+          href="https:/www.github.com/jebzley"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <Image
+            src={"/github.svg"}
+            width={20}
+            height={20}
+            alt="Github"
+            className="hover:opacity-50 transition-opacity"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.linkedin.com/in/sebleedev"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <Image
+            src={"/linkedin.svg"}
+            width={20}
+            height={20}
+            alt="Linked In"
+            className="hover:opacity-50 transition-opacity"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          href="https:/www.twitter.com/sebleedev"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <Image
+            src={"/twitter.svg"}
+            width={20}
+            height={20}
+            alt="Twitter"
+            className="hover:opacity-50 transition-opacity"
+          />
+        </a>
+      </li>
+    </ul>
+  );
+}
