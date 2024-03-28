@@ -20,7 +20,7 @@ export default function RootLayout({
         <header>
           <Navigation />
         </header>
-        <main className="h-full">{children}</main>
+        <main className="h-full p-16">{children}</main>
       </body>
     </html>
   );
