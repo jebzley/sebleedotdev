@@ -2,6 +2,7 @@ import Link from "next/link";
 import { WorkItem } from "./components/WorkItem";
 import { WORK_HISTORY_DATA } from "./constants";
 import { PageLayout } from "@/components/PageLayout";
+import { PageTitle } from "@/components/PageTitle";
 
 export interface WorkItemData {
   company?: string;
@@ -14,11 +15,8 @@ export interface WorkItemData {
 export default function WorkPage() {
   return (
     <PageLayout>
-      <div className="flex gap-6 flex-col">
-        <hgroup>
-          <h1 className="text-5xl">Curriculum Vitae</h1>
-          <p className="text-2xl">Sebastian Lee</p>
-        </hgroup>
+      <div className="flex flex-col gap-8">
+        <PageTitle title="Curriculum Vitae" subtitle="Seb Lee" />
         <p>
           A detailed list of my work history (excluding my retail and kitchen
           work as a student).{" "}

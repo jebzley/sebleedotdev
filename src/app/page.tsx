@@ -1,20 +1,16 @@
 import { PageLayout } from "@/components/PageLayout";
+import { PageTitle } from "@/components/PageTitle";
 
 export default function Home() {
   return (
     <PageLayout>
-      <section>
-        <div className="flex gap-6 flex-wrap items-center">
-          <hgroup>
-            <h1 className="text-5xl">Seb Lee</h1>
-            <p className="text-2xl">Software Developer</p>
-          </hgroup>
-        </div>
+      <div className="flex flex-col gap-8">
+        <PageTitle title="Seb Lee" subtitle="Software Developer" />
         <p>
           A short paragraph about me and some links to my socials. To be added
           in a later PR.
         </p>
-      </section>
+      </div>
       <section className="overflow-scroll">
         <p>recent activity goes here</p>
       </section>
