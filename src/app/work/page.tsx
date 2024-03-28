@@ -25,7 +25,7 @@ export default function WorkPage() {
           </Link>
         </p>
       </div>
-      <div className="overflow-scroll">
+      <div className="lg:overflow-scroll">
         <ul className="list-none">
           {WORK_HISTORY_DATA.map((item, index) => {
             return (
