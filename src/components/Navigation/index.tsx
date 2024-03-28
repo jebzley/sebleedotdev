@@ -1,5 +1,6 @@
 import { ROUTES } from "@/constants/routes";
 import Link from "next/link";
+import { NavigationLink } from "./NavigationLink";
 
 const navItems: { name: string; href: string }[] = [
   { name: "Home", href: ROUTES.HOME },
@@ -13,7 +14,7 @@ export function Navigation() {
         {navItems.map((item) => {
           return (
             <li key={item.name}>
-              <Link href={item.href}>{item.name}</Link>
+              <NavigationLink name={item.name} href={item.href} />
             </li>
           );
         })}

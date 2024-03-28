@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { WorkItem } from "./components/WorkItem";
 import { WORK_HISTORY_DATA } from "./constants";
+import { PageLayout } from "@/components/PageLayout";
+import { PageTitle } from "@/components/PageTitle";
 
 export interface WorkItemData {
   company?: string;
@@ -12,21 +14,18 @@ export interface WorkItemData {
 
 export default function WorkPage() {
   return (
-    <div className="h-full flex">
-      <div className="flex flex-col mx-auto gap-6 max-w-xl">
-        <div className="flex gap-6 flex-wrap items-center">
-          <hgroup>
-            <h1 className="text-5xl">Curriculum Vitae</h1>
-            <p className="text-2xl">Sebastian Lee</p>
-          </hgroup>
-          <p>
-            A detailed list of my work history (excluding my retail and kitchen
-            work as a student).{" "}
-            <Link href="#">
-              You can download a PDF copy of my CV by clicking here.
-            </Link>
-          </p>
-        </div>
+    <PageLayout>
+      <div className="flex flex-col gap-8">
+        <PageTitle title="Curriculum Vitae" subtitle="Seb Lee" />
+        <p>
+          A detailed list of my work history (excluding my retail and kitchen
+          work as a student).{" "}
+          <Link href="#">
+            You can download a PDF copy of my CV by clicking here.
+          </Link>
+        </p>
+      </div>
+      <div className="lg:overflow-scroll">
         <ul className="list-none">
           {WORK_HISTORY_DATA.map((item, index) => {
             return (
@@ -39,6 +38,6 @@ export default function WorkPage() {
           })}
         </ul>
       </div>
-    </div>
+    </PageLayout>
   );
 }
