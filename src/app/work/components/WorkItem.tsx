@@ -9,7 +9,7 @@ export function WorkItem({
 }) {
   const ariaLabel = `${item.company} - ${item.jobTitle}`;
   return (
-    <li className="relative pb-4" aria-label={ariaLabel}>
+    <li className="relative pb-4" aria-label={ariaLabel} key={ariaLabel}>
       {!isLastIndex && (
         <span
           aria-hidden

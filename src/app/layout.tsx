@@ -16,11 +16,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} p-8 h-screen`}>
+      <body
+        className={`${inter.className} p-8 lg:px-24 max-w-screen-xl mx-auto h-screen`}
+      >
         <header>
           <Navigation />
         </header>
-        <main className="h-full p8 pt-16 lg:p-16">{children}</main>
+        <main className="h-full pt-16">{children}</main>
       </body>
     </html>
   );

@@ -1,17 +1,28 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface IProps {
   name: string;
   href: string;
 }
 export function NavigationLink({ name, href }: IProps) {
+  const pathname = usePathname();
+  const isCurrentRoute = pathname === href;
+
   return (
     <Link
-      className="group/navlink relative flex flex-col text-gray-500 hover:text-black transition-all"
+      className={`group/navlink relative flex flex-col ${
+        isCurrentRoute ? "text-black" : "text-gray-500"
+      } hover:text-black transition-all`}
       href={href}
     >
       {name.toUpperCase()}
-      <span className="h-full w-6/12 transition-all border-b border-gray-500 group-hover/navlink:w-full group-hover/navlink:border-black "></span>
+      <span
+        className={`h-full w-6/12 transition-all border-b border-gray-500 ${
+          isCurrentRoute ? "border-black w-full" : "border-gray-500 w-6/12"
+        } group-hover/navlink:w-full group-hover/navlink:border-black`}
+      ></span>
     </Link>
   );
 }
