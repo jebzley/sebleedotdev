@@ -1,5 +1,4 @@
 import { ROUTES } from "@/constants/routes";
-import Link from "next/link";
 import { NavigationLink } from "./NavigationLink";
 
 const navItems: { name: string; href: string }[] = [
