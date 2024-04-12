@@ -1,4 +1,4 @@
-import { WorkItemData } from "../page";
+import { WorkItemData } from "./constants";
 
 export function WorkItem({
   item,
