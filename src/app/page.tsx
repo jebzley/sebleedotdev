@@ -1,8 +1,11 @@
 import { SocialIcons } from "@/components/SocialIcons";
 import { PageLayout } from "@/components/PageLayout";
 import { PageTitle } from "@/components/PageTitle";
+import { CurriculumVitae } from "@/components/CurriculumVitae";
 
 export default function Home() {
+  const isSmolModeEnabled = process.env.NEXT_PUBLIC_SMOL_MODE;
+
   return (
     <PageLayout>
       <div className="flex flex-col gap-8">
@@ -14,7 +17,11 @@ export default function Home() {
         </p>
       </div>
       <section className="overflow-scroll">
-        <p>recent activity goes here</p>
+        {isSmolModeEnabled ? (
+          <CurriculumVitae />
+        ) : (
+          <p>recent activity goes here</p>
+        )}
       </section>
     </PageLayout>
   );
