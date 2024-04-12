@@ -19,8 +19,8 @@ export function NavigationLink({ name, href }: IProps) {
     >
       {name.toUpperCase()}
       <span
-        className={`h-full w-6/12 transition-all border-b border-gray-500 ${
-          isCurrentRoute ? "border-black w-full" : "border-gray-500 w-6/12"
+        className={`h-full transition-all border-b border-gray-500 ${
+          isCurrentRoute ? "border-black w-full" : "border-gray-500 w-0"
         } group-hover/navlink:w-full group-hover/navlink:border-black`}
       ></span>
     </Link>

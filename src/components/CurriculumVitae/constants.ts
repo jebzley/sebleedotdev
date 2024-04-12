@@ -1,4 +1,10 @@
-import { WorkItemData } from "./page";
+export interface WorkItemData {
+  company?: string;
+  jobTitle: string;
+  description?: string;
+  dateRange: string;
+  tools?: string[];
+}
 
 export const WORK_HISTORY_DATA: WorkItemData[] = [
   {
