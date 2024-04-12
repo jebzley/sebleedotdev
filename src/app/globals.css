@@ -3,21 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
+  --white: #fff;
+  --black: #32292F;
+  --red: #D1462F;
+  --blue: #4D7EA8;
+  --gray: #607B7D;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+  color: var(--black);
+  background: var(--white)
 }
 
 h1, h2, h3, h4, h5 {
   font-weight: 700;
-}
-
-h1 {
-  font-size: 2rem;
 }
 
 p, a {
