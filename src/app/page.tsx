@@ -16,7 +16,9 @@ export default function Home() {
           I have 3 years of professional experience in creating performant,
           accessible and beautiful web applications.
         </p>
-        <a href="/">Click here to download a PDF copy of my CV</a>
+        <a href="/cv.pdf" rel="noopener noreferrer" target="_blank">
+          Click here to download a PDF copy of my CV
+        </a>
       </div>
       <div className="flex flex-col gap-8 lg:overflow-hidden">
         <h2 className="text-3xl">Curriculum Vitae</h2>
