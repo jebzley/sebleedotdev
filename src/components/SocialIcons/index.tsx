@@ -4,17 +4,17 @@ const links = [
   {
     href: "https://www.github.com/jebzley",
     label: "Github",
-    imgSrc: "/github.svg",
+    imgSrc: "/assets/icons/github.svg",
   },
   {
     href: "https://www.linkedin.com/in/sebleedev",
     label: "Linked In",
-    imgSrc: "/linkedin.svg",
+    imgSrc: "/assets/icons/linkedin.svg",
   },
   {
     href: "https://www.twitter.com/sebleedev",
     label: "Github",
-    imgSrc: "/twitter.svg",
+    imgSrc: "/assets/icons/twitter.svg",
   },
 ];
 

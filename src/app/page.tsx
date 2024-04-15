@@ -16,7 +16,11 @@ export default function Home() {
           I have 3 years of professional experience in creating performant,
           accessible and beautiful web applications.
         </p>
-        <a href="/cv.pdf" rel="noopener noreferrer" target="_blank">
+        <a
+          href={"/assets/documents/cv.pdf"}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           Click here to download a PDF copy of my CV
         </a>
       </div>
