@@ -12,9 +12,11 @@ export default function Home() {
         <PageTitle title="Seb Lee" subtitle="Software Developer" />
         <SocialIcons />
         <p>
-          A short paragraph about me and some links to my socials. To be added
-          in a later PR.
+          I'm a software developer currently living in beautiful North Somerset.
+          I have 3 years of professional experience in creating performant,
+          accessible and beautiful web applications.
         </p>
+        <a href="/">Click here to download a PDF copy of my CV</a>
       </div>
       <div className="flex flex-col gap-8 lg:overflow-hidden">
         <h2 className="text-3xl">Curriculum Vitae</h2>
