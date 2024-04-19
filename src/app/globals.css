@@ -23,6 +23,14 @@ p, a {
   font-size: 1rem;
 }
 
+.text-secondary {
+  color: var(--gray)
+}
+
+.background-secondary {
+  background-color: var(--gray);
+}
+
 button {
   border: 1px solid red;
   padding: 0.5rem;
