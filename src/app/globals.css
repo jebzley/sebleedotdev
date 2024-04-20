@@ -8,6 +8,7 @@
   --red: #D1462F;
   --blue: #4D7EA8;
   --gray: #607B7D;
+  --visited-link: #551A8B;
 }
 
 body {
@@ -31,6 +32,10 @@ p, a {
   color: var(--blue);
   text-decoration: underline;
   fill: var(--blue);
+  &:visited {
+    color: var(--visited-link);
+    fill: var(--visited-link);
+  }
 }
 
 .background-secondary {
