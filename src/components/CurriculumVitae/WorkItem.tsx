@@ -1,4 +1,5 @@
 import { Chip } from "../Chip";
+import { CustomLink } from "../CustomLink";
 import { WorkItemData } from "./constants";
 
 function VerticalLine() {
@@ -36,13 +37,12 @@ export function WorkItem({
         </header>
         <div className="flex flex-col gap-4">
           <hgroup>
-            <a href={item.link} rel="noopener noreferrer" target="_blank">
-              <h3 aria-label={`${item.company} - ${item.jobTitle}`}>
+            <h3 aria-label={`${item.company} - ${item.jobTitle}`}>
+              <CustomLink type="external" href={item.link}>
                 {item.company}
-                <br />
-                <span className="font-medium">{item.jobTitle}</span>
-              </h3>
-            </a>
+              </CustomLink>
+              <span className="font-medium">{item.jobTitle}</span>
+            </h3>
 
             {item.promotions &&
               item.promotions.map((promotion) => (

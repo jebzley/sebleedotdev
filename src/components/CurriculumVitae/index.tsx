@@ -3,7 +3,7 @@ import { WorkItem } from "./WorkItem";
 
 export function CurriculumVitae() {
   return (
-    <ul className="list-none">
+    <ol className="list-none">
       {WORK_HISTORY_DATA.map((item, index) => {
         return (
           <WorkItem
@@ -13,6 +13,6 @@ export function CurriculumVitae() {
           />
         );
       })}
-    </ul>
+    </ol>
   );
 }

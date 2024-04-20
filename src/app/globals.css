@@ -27,6 +27,12 @@ p, a {
   color: var(--gray)
 }
 
+.text-link {
+  color: var(--blue);
+  text-decoration: underline;
+  fill: var(--blue);
+}
+
 .background-secondary {
   background-color: var(--gray);
 }
