@@ -34,18 +34,15 @@ export function WorkItem({
         <header className="min-w-max text-xs text-secondary uppercase leading-loose">
           {item.dateRange}
         </header>
-        <div className="flex flex-col gap-4 relative">
-          <a
-            className="after:absolute after:inset-0"
-            href={item.link}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <h3 aria-label={`${item.company} - ${item.jobTitle}`}>
-              {item.company}
-              <br />
-              <span className="font-medium">{item.jobTitle}</span>
-            </h3>
+        <div className="flex flex-col gap-4">
+          <hgroup>
+            <a href={item.link} rel="noopener noreferrer" target="_blank">
+              <h3 aria-label={`${item.company} - ${item.jobTitle}`}>
+                {item.company}
+                <br />
+                <span className="font-medium">{item.jobTitle}</span>
+              </h3>
+            </a>
 
             {item.promotions &&
               item.promotions.map((promotion) => (
@@ -53,7 +50,7 @@ export function WorkItem({
                   {promotion.jobTitle}
                 </p>
               ))}
-          </a>
+          </hgroup>
 
           <p>{item.description}</p>
 
