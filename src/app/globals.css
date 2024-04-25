@@ -8,6 +8,7 @@
   --red: #D1462F;
   --blue: #4D7EA8;
   --gray: #607B7D;
+  --visited-link: #551A8B;
 }
 
 body {
@@ -21,6 +22,24 @@ h1, h2, h3, h4, h5 {
 
 p, a {
   font-size: 1rem;
+}
+
+.text-secondary {
+  color: var(--gray)
+}
+
+.text-link {
+  color: var(--blue);
+  text-decoration: underline;
+  fill: var(--blue);
+  &:visited {
+    color: var(--visited-link);
+    fill: var(--visited-link);
+  }
+}
+
+.background-secondary {
+  background-color: var(--gray);
 }
 
 button {

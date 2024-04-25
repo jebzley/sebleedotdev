@@ -1,4 +1,21 @@
+import { Chip } from "../Chip";
+import { CustomLink } from "../CustomLink";
 import { WorkItemData } from "./constants";
+
+function VerticalLine() {
+  return (
+    <span
+      aria-hidden
+      className="min-h-full border-l border-black absolute top-3"
+    />
+  );
+}
+
+function HorizontalLine() {
+  return (
+    <span aria-hidden className="w-3 border-b border-black absolute top-3" />
+  );
+}
 
 export function WorkItem({
   item,
@@ -7,32 +24,56 @@ export function WorkItem({
   item: WorkItemData;
   isLastIndex: boolean;
 }) {
-  const ariaLabel = `${item.company} - ${item.jobTitle}`;
   return (
-    <li className="relative pb-4" aria-label={ariaLabel} key={ariaLabel}>
-      {!isLastIndex && (
-        <span
-          aria-hidden
-          className="min-h-full border border-black absolute top-3"
-        />
-      )}
-      <span aria-hidden className="w-3 border border-black absolute top-3" />
-      <div className="ml-6 flex gap-6">
-        <header className="min-w-max text-xs uppercase leading-loose">
+    <li
+      className="relative pb-4"
+      aria-label={`${item.company} - ${item.jobTitle}`}
+    >
+      {!isLastIndex && <VerticalLine />}
+      <HorizontalLine />
+      <div className="ml-6 flex gap-4">
+        <header className="min-w-max text-xs text-secondary uppercase leading-loose">
           {item.dateRange}
         </header>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-4">
           <hgroup>
-            {item.company && <h2>{item.company}</h2>}
-            <h3 className="font-medium">{item.jobTitle}</h3>
+            <h4 aria-label={`${item.company} - ${item.jobTitle}`}>
+              {item.link ? (
+                <CustomLink type="external" href={item.link}>
+                  {item.company}
+                </CustomLink>
+              ) : (
+                <span className="block">{item.company}</span>
+              )}
+              <span className="font-medium">{item.jobTitle}</span>
+            </h4>
+
+            {item.promotions &&
+              item.promotions.map((promotion) => (
+                <p aria-hidden className="font-medium text-secondary">
+                  {promotion.jobTitle}
+                </p>
+              ))}
           </hgroup>
-          <p>{item.description}</p>
+
+          <p className="text-sm">{item.description}</p>
+
+          {item.points && (
+            <ul
+              className="list-disc pl-4 text-sm"
+              aria-label="Notable achievements"
+            >
+              {item.points.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
+            </ul>
+          )}
           {item.tools && (
             <ul className="flex gap-2 flex-wrap" aria-label="Technologies used">
               {item.tools.map((tool) => {
                 return (
-                  <li className="bg-gray-200 px-3 py-2 rounded-3xl text-xs">
-                    {tool}
+                  <li key={tool}>
+                    <Chip>{tool}</Chip>
                   </li>
                 );
               })}
