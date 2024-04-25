@@ -37,12 +37,16 @@ export function WorkItem({
         </header>
         <div className="flex flex-col gap-4">
           <hgroup>
-            <h3 aria-label={`${item.company} - ${item.jobTitle}`}>
-              <CustomLink type="external" href={item.link}>
-                {item.company}
-              </CustomLink>
+            <h4 aria-label={`${item.company} - ${item.jobTitle}`}>
+              {item.link ? (
+                <CustomLink type="external" href={item.link}>
+                  {item.company}
+                </CustomLink>
+              ) : (
+                <span className="block">{item.company}</span>
+              )}
               <span className="font-medium">{item.jobTitle}</span>
-            </h3>
+            </h4>
 
             {item.promotions &&
               item.promotions.map((promotion) => (
@@ -52,17 +56,17 @@ export function WorkItem({
               ))}
           </hgroup>
 
-          <p>{item.description}</p>
+          <p className="text-sm">{item.description}</p>
 
           {item.points && (
-            <div>
-              <h4>Duties and Achievements</h4>
-              <ul className="list-disc pl-4">
-                {item.points.map((point) => (
-                  <li key={point}>{point}</li>
-                ))}
-              </ul>
-            </div>
+            <ul
+              className="list-disc pl-4 text-sm"
+              aria-label="Notable achievements"
+            >
+              {item.points.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
+            </ul>
           )}
           {item.tools && (
             <ul className="flex gap-2 flex-wrap" aria-label="Technologies used">
