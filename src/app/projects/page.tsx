@@ -1,4 +1,5 @@
 import { Card } from "@/components/Card";
+import { CustomLink } from "@/components/CustomLink";
 import { PageLayout } from "@/components/PageLayout";
 import { PageTitle } from "@/components/PageTitle";
 
@@ -28,13 +29,16 @@ export default function ProjectsPage() {
       <div className="flex flex-col gap-8">
         <PageTitle title="Projects" subtitle="Stuff I've done" />
         <p>
-          For those of you that don't understand the joke. The sign is a subtle
-          joke. The shop is called "Sneed's Feed & Seed", where feed and seed
-          both end in the sound "-eed", thus rhyming with the name of the owner,
-          Sneed. The sign says that the shop was "Formerly Chuck's", implying
-          that the two words beginning with "F" and "S" would have ended with
-          "-uck", rhyming with "Chuck". So, when Chuck owned the shop, it would
-          have been called "Chuck's Fuck and Suck".
+          This page contains a selection of things I've made in my free time.
+          <br />
+          I'm hoping that by dedicating a page on my website to them it will
+          motivate me to make more of them!
+        </p>
+        <p>
+          <CustomLink href="https://github.com/jebzley" type="external">
+            Check out my Github
+          </CustomLink>{" "}
+          if you'd like a more detailed look at what I've been up to.
         </p>
       </div>
       <ul className="flex flex-col gap-8 group/card-grid list-none">
