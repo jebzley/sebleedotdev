@@ -6,7 +6,6 @@ import { CustomLink } from "@/components/CustomLink";
 
 export default function Home() {
   const isSmolModeEnabled = process.env.NEXT_PUBLIC_SMOL_MODE;
-
   return (
     <PageLayout>
       <section aria-label="About Me" className="flex flex-col gap-8">
