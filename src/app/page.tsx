@@ -6,7 +6,6 @@ import { CustomLink } from "@/components/CustomLink";
 
 export default function Home() {
   const isSmolModeEnabled = process.env.NEXT_PUBLIC_SMOL_MODE;
-  console.log(isSmolModeEnabled);
   return (
     <PageLayout>
       <section aria-label="About Me" className="flex flex-col gap-8">
@@ -26,7 +25,6 @@ export default function Home() {
         className="flex flex-col gap-8 lg:overflow-hidden"
       >
         <h2 className="text-3xl">Curriculum Vitae</h2>
-        <p>{isSmolModeEnabled}</p>
         <div className="lg:overflow-scroll lg:pr-4">
           {isSmolModeEnabled ? (
             <CurriculumVitae />
