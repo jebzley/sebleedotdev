@@ -4,6 +4,7 @@ import { NavigationLink } from "./NavigationLink";
 const navItems: { name: string; href: string }[] = [
   { name: "Home", href: ROUTES.HOME },
   { name: "CV", href: ROUTES.WORK },
+  { name: "Projects", href: ROUTES.PROJECTS },
 ];
 
 export function Navigation() {
