@@ -32,6 +32,7 @@ export function Card({ title, description, type, link, imgSrc }: CardProps) {
           width="2.5em"
           height="2.5em"
           fill="#607B7D"
+          viewBox="0 -800 800 800"
           className="transition group-hover:translate-x-1 group-hover:-translate-y-1"
         />
       </div>

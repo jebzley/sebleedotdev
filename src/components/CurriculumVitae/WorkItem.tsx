@@ -43,8 +43,9 @@ export function WorkItem({
                   {item.company}
                 </CustomLink>
               ) : (
-                <span className="block">{item.company}</span>
+                item.company
               )}
+              <br />
               <span className="font-medium">{item.jobTitle}</span>
             </h4>
 

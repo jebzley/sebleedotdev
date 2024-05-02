@@ -11,9 +11,9 @@ interface IProps {
 export function CustomLink({ href, children, type = "internal" }: IProps) {
   const icon =
     type === "download" ? (
-      <DownloadIcon />
+      <DownloadIcon className="inline" />
     ) : (
-      <LinkIcon className="transition group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
+      <LinkIcon className="transition inline group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
     );
   if (type === "external" || "download") {
     return (
@@ -21,10 +21,9 @@ export function CustomLink({ href, children, type = "internal" }: IProps) {
         rel="noopener noreferrer"
         target="_blank"
         href={href}
-        className="group/link flex items-center gap-1 text-link"
+        className="group/link text-link"
       >
-        {children}
-        {icon}
+        {children} {icon}
       </a>
     );
   }
