@@ -5,15 +5,15 @@ import { LinkIcon } from "../SVGIcons";
 
 export interface CardProps {
   title: string;
-  description: string;
+  subtitle: string;
   type: string;
   link: string;
   imgSrc: string;
 }
 
-export function Card({ title, description, type, link, imgSrc }: CardProps) {
+export function Card({ title, subtitle, type, link, imgSrc }: CardProps) {
   return (
-    <div className="group border p-4 rounded relative cursor-pointer transition text-black group-hover/card-grid:opacity-50 hover:!opacity-100 hover:shadow-sm">
+    <div className="group/card border p-4 rounded relative cursor-pointer transition text-black hover:shadow-sm">
       <div className="flex justify-between">
         <div className="flex gap-8">
           <div className="h-40 w-40 relative">
@@ -25,7 +25,7 @@ export function Card({ title, description, type, link, imgSrc }: CardProps) {
             <Link href={link} className="after:absolute after:inset-0">
               <h2>{title}</h2>
             </Link>
-            <p className="text-sm">{description}</p>
+            <p className="text-sm">{subtitle}</p>
           </div>
         </div>
         <LinkIcon
@@ -33,7 +33,7 @@ export function Card({ title, description, type, link, imgSrc }: CardProps) {
           height="2.5em"
           fill="#607B7D"
           viewBox="0 -800 800 800"
-          className="transition group-hover:translate-x-1 group-hover:-translate-y-1"
+          className="transition group-hover/card:translate-x-1 group-hover/card:-translate-y-1"
         />
       </div>
     </div>
